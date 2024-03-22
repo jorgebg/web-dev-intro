@@ -1,0 +1,264 @@
+pre_steps: |
+  1. Download the HTML Template and save it as `${idnumber}_name.html` (replacing "name" with your full name).
+  1. Replace the `title` tag with your name.
+  1. Add a `<script>` at the end of the `<body>` (before `</body>`).
+post_steps: |
+  1. Upload the HTML file.
+instructions: |
+  Remember to upload a single HTML file named as `${idnumber}_name.html` (replacing "name" with your full name).
+title: "JavaScript (JS)"
+name_prefix: "JS ${nactivity}: "
+activities:
+  - name: Introduction
+    introduction: |
+      JavaScript (JS) is a coding language used to make webpages **interactive**.
+
+      The code must be inside a `<script>` tag in the HTML document:
+
+      ```
+      <html>
+        <head>
+          ...
+        </head>
+        <body>
+        ...
+          <script>
+            // JS CODE GOES HERE
+          </script>
+        </body>
+      </html>
+      ```
+
+      JavaScript has many _functions_ that allows us to manipulate the elements of the HTML document (along with other things).
+
+      For example, the following code _calls_ the _function_ `documend.body.append`, which adds a given text at the end of the `body` element of the HTML document:
+
+      ```js
+      document.body.append("Welcome")
+      ```
+
+      When applied to the HTML Template, the text `Welcome` will be placed under the initial paragraph:
+
+      > 🏛️ Hello, student!
+      >
+      > Welcome
+
+      All the _functions_ in JavaScript are _called_ with the following syntax: `name(parameter)`.
+      The code can make multiple _function calls_, in multiple lines. Each line is executed one after the other, in the same order as they are written.
+
+      For example, if we add another _call_ after the previous code:
+
+      ```js
+      document.body.append("Welcome")
+      document.body.append(" to JS.")
+      ```
+
+      The document will end up like this:
+
+      > 🏛️ Hello, student!
+      >
+      > Welcome to JS.
+
+
+      It is recommended to place the `script` tag at the end of the `body` tag, so the script is executed after all the HTML elements are shown.
+
+    resources:
+      MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash
+    steps: |
+      1. Use JS for appending your full name to the HTML document.
+    challenge: |
+      `document.body.prepend` is a _function_ that puts a given text at the beginning of the `body` element of the HTML document.
+      Call this function **three** times, each of them with the parameters "1, " "2, " "3, ", respectively.
+      Then sort the calls so the document ends up like this:
+
+      > 1, 2, 3,
+      >
+      > 🏛️ Hello, student!
+
+    rubric:
+      Valid code: 1
+      Followed first three steps: 1
+      Append the full name with JS: 6
+      Challenge: 2
+
+  - name: Variables
+    introduction: |
+      **Variables** are names for values (such as numbers or text). We use them in JS for storing data. They are defined like this:
+
+      ```js
+      let fruit = "Pear"
+      ```
+
+      - `let` is the word that indicates we are defining a variable.
+      - `fruit` is an arbitrary name we are giving to the variable.
+      - `=` indicates we are going to give a _value_ to the `fruit` variable.
+      - `"Pear"` is the _value_ of the variable.
+
+      We can use _variables_ as parameters in _functions_. For example, we could call the function we saw in the previous practical like this:
+
+      ```js
+      let greeting = "Welcome"
+      document.body.append(greeting)
+      ```
+
+      This would yield the same result we got in the previous practical:
+
+      > 🏛️ Hello, student!
+      >
+      > Welcome
+
+      _Functions_ can also **return values** that we can store in variables. For example, the `Date` function returns the current date and time.
+      The following code stores the current date and time inside a variable named `today`.
+
+      ```js
+      let today = Date()
+      ```
+
+    resources:
+      MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash
+    steps: |
+      1. Store the current date in a variable using `Date()`.
+      1. Append the date stored in the variable to the end of the document.
+    challenge: |
+      The function `prompt(text)` shows a message with the text parameter, asks the user for input, and then returns its value.
+      Using `prompt(text)`, a variable, and `document.body.append`, ask the user for their name and append it to the end of the body.
+    rubric:
+      Valid code: 1
+      Followed first three steps: 1
+      Store the date in a variable: 3
+      Append the date: 3
+      Challenge: 2
+
+  - name: Objects
+    introduction: |
+      One special thing about variables we saw in the previous practical is that they can contain any kind of data, not just text or numbers.
+      Variables can also contain _functions_ and _objects_.
+
+      **Objects** are collections of several variables and functions, and they can represent the elements of the HTML document.
+      For example, `document.body.append` (the function we used in the previous practicals for appending text to the body) is part of the `document` object.
+
+      The `document` object is the root object that represents the whole HTML document.
+
+      Along with many others, the `document` object has a function for finding HTML elements of the document: `document.querySelector(selector)`.
+      It takes a CSS selector as a text parameter and _returns_ an object representing the HTML element selected.
+
+      For example, if we run the following code in our HTML template:
+
+      ```js
+      let element = document.querySelector("p")
+      ```
+
+      Then an object representing the paragraph of the document would be stored inside the `element` variable.
+      (Remember the template has a single `p` paragraph containing the text "🏛️ Hello, student!").
+
+      The, we can manipulate the text of the element changing its _propertu_ `textContent`:
+
+      ```js
+      let element = document.querySelector("p")
+      element.textContent = "🏞️ It's adventure time!"
+      ```
+
+      This code would transform the HTML from this:
+
+      > 🏛️ Hello, student!
+
+      To this:
+
+      > 🏞️ It's adventure time!
+
+    resources:
+      MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash
+      Arithmetic operations: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math#arithmetic_operators
+    steps: |
+      1. The function `Math.random()` returns a random number between 0 and 1. Call it and store its value in a variable.
+      1. Replace the text of the first paragraph with the number stored in the variable.
+    challenge: |
+      We can perform arithmetic operations with variables using the symbols `+`, `-`, `*` (multiplication) and `/` (division).
+      The following example would store `13` in the `result` variable:
+
+      ```js
+      let x = 2
+      let result = 1 + 6 * x
+      ```
+
+      The `Math` object has another function: `Math.floor(number)`, which returns a given number rounded down.
+      Use the arithmetic operators and `Math.floor(number)` for changing the required random number with the result of rolling a 6-sided dice.
+    rubric:
+      Valid code: 1
+      Followed first three steps: 1
+      Store a random number in a variable: 3
+      Replace paragraph text with a random number between 0 and 1: 3
+      Challenge: 2
+
+  - name: Functions and events
+    introduction: |
+      In JS we can define our own _functions_ following this syntax:
+
+      ```js
+      function welcome() {
+        let text = "Welcome"
+        document.body.append(text)
+      }
+      ```
+
+      - `function` is the word that indicates we are defining a function.
+      - `welcome` is an arbitrary name we are giving to the function.
+      - `{` and `}` indicates the start and end of the code to be executed, respectively. The code between these symbols will be executed the function is when called.
+
+      If we apply the example above to the HTML template, we won't see any changes, as the function hasn't been called yet. But if we add the following line:
+
+      ```js
+      welcome()
+      ```
+
+      Then the document will be updated:
+
+      > 🏛️ Hello, student!
+      >
+      > Welcome
+
+      We can also get a function called when an HTML element is clicked.
+      In order to do so, first we need to get the target HTML element, and then bind the function to the "click" using the `addEventListener` function.
+
+      ```js
+      let element = document.querySelector("p");
+      element.addEventListener("click", welcome)
+      ```
+
+      From now on, each time we click on first paragraph (🏛️ Hello, student!), the `welcome` function will be called and then the text `Welcome` will be appended to the end of the body.
+
+    resources:
+      MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash
+      HTML button element: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
+    steps: |
+      1. Create a function named `whatTime`. It must perform the following operations:
+          1. Store the current date in a variable (using the `Date` function).
+          1. Append the date to the end of the body.
+      1. Call the `whatTime` function each time the initial paragraph is clicked.
+    challenge: |
+      Add the following HTML button to the document and call the `whatTime` function each time it is clicked:
+
+      ```html
+      <button>What time is it?</button>
+      ```
+    rubric:
+      Valid code: 1
+      Followed first three steps: 1
+      Add a button: 1
+      Create `whatTime` function: 2
+      Call `whatTime` function on each click: 3
+      Challenge: 2
+
+  # - name: Control
+  #   introduction: |
+  #     If/else, loops
+  #   resources:
+  #     MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash
+  #   steps: |
+  #     1.
+  #   challenge: |
+  #     None
+  #   rubric:
+  #     Valid code: 1
+  #     Followed first three steps: 1
+  #     None: 8

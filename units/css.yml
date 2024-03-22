@@ -1,0 +1,138 @@
+pre_steps: |
+  1. Download the HTML Template and save it as `${idnumber}_name.html` (replacing "name" with your full name).
+  1. Replace the `title` tag with your name.
+  1. Add a `<style>` tag inside the `<head>` (after `</title>`).
+post_steps: |
+  1. Upload the HTML file.
+instructions: |
+  Remember to upload a single HTML file named as `${idnumber}_name.html` (replacing "name" with your full name).
+title: "Cascade Style Sheets (CSS)"
+name_prefix: "CSS ${nactivity}: "
+activities:
+  - name: Introduction
+    introduction: |
+      CSS (Cascading Style Sheets) is the code that styles web content. It is what you use to selectively style HTML elements.
+      For example, the following code targets the `p` tags (*paragraph* text), setting their font color to `white` and the background color to `black`:
+
+      ```css
+      p {
+        color: white;
+        background-color: black;
+      }
+      ```
+
+      This will change the color of the background and font of **all the paragraphs** in the document (all the `p` elements).
+
+      The CSS code must be inside a `<style>` tag in the HTML document:
+
+      ```html
+      <html>
+        <head>
+          <style>
+            p {
+              color: white;
+              background-color: black;
+            }
+          </style>
+        </head>
+      ...
+      ```
+
+
+      It's recommended to place the `styles` tag inside the `head` tag, so the styles are loaded before the body is rendered.
+
+    resources:
+      MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#adding_css_to_our_document
+    steps: |
+      1. Use CSS for changing the background color and a font color of the `body` element. You can pick any of the available [named colors](https://www.w3schools.com/colors/colors_names.asp). They must be different from the given example.
+    challenge: |
+      Replace the named colors with [hexadecimal colors](https://www.w3schools.com/colors/colors_hexadecimal.asp).
+    rubric:
+      Valid code: 1
+      Followed first three steps: 1
+      Background color: 3
+      Font color: 3
+      Challenge: 2
+
+  - name: Styling text
+    introduction: |
+      In the previous activity, we have styled all elements based on their HTML tag names (`p` and `body`).
+
+      To select a subset of the elements without changing the others, you can add a `class` attribute to the tags and then target that class in your CSS.
+      Elements with the `class` attribute can be targeted in CSS using a selector following the format `.class { ... }`. For example:
+
+      ```html
+      <style>
+        .special {
+          font-weight: bold;
+        }
+      </style>
+      ...
+      <ul>
+        <li>Item one</li>
+        <li class="special">Item two</li>
+      </ul>
+      ```
+
+      This will set the style of the second item of the list as bold:
+
+      - Item one
+      - **Item two**
+
+    resources:
+      MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#adding_a_class
+    steps: |
+      1. Add an ordered list with a top three tier list. The theme is up to you (e.g. top three favorite dishes)
+      1. Use CSS classes for changing the font color of the 1st, 2nd and 3th item to `gold`, `silver` and `#cd7f32`.
+    challenge: |
+      Without changing the class of the first item, change its style to be bold.
+    rubric:
+      Valid code: 1
+      Followed first three steps: 1
+      1st item color: 1.5
+      2nd item color: 1.5
+      3rd item color: 1.5
+      Meaningful list: 1.5
+      Challenge: 2
+
+  - name: The box model
+    introduction: |
+      All HTML elements can be considered _boxes_. Each box has five modifiable CSS properties:
+
+        - `height` and `width` describes the dimensions of the content.
+        - `padding` describes the space between the content and the border of the box (makes the element bigger or smaller).
+        - `border` is any kind of line surrounding the box.
+        - `margin` is the space around the border (separation with other elements).
+
+
+      ![box model image](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/box-model.png)
+
+      For example:
+
+      ```html
+      <style>
+        p {
+          padding: 5px;
+          margin: 5px;
+          border: 1px solid green;
+        }
+      </style>
+      ```
+
+      This will give a padding, margin and border to all the paragraphs of the document. You can see the result [here](https://developer.mozilla.org/en-US/play?id=%2FivztiVBOVFpYzgU8WMzw9gwEU70qGHCyNGfbCzTZPJy76%2FmzGqmBkp9JXtnSETT0EIwkoTF5QgDENEU).
+
+    resources:
+      MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+    steps: |
+      1. Use CSS for changing the `padding` **and** `border` of the paragraph (`p` tag) of the template. The border color and size must be different from the given example.
+      1. Add one image (`img` tag) from [Wikimedia](https://commons.wikimedia.org/). Use an absolute URL for the image source (`src="https://upload.wikimedia.org/..."`), don't download the image.
+      1. Use CSS for changing the `width` **or** `height` of the image.
+    challenge: |
+      Add a `margin` to both the paragraph and the image using a single CSS class.
+    rubric:
+      Valid code: 1
+      Followed first three steps: 1
+      Paragraph padding: 2
+      Paragraph border: 2
+      Image width or height: 2
+      Challenge: 2

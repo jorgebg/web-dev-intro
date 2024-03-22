@@ -1,0 +1,26 @@
+title: "Web Hosting Services"
+name_prefix: "HOST: "
+instructions: |
+  Share the URL of the website you published.
+activities:
+  - name: Publish your website
+    introduction: |
+      An **web hosting service** is a service that runs servers connected to the Internet, allowing organizations and individuals to serve websites connected to the Internet.
+      On this activity we are going to publish a website on `Netlify`, a free web hosting service.
+    resources:
+      Netlify Docs: https://docs.netlify.com/welcome/add-new-site/#deploy-local-files
+      Web hosting services (Wikipedia): https://en.wikipedia.org/wiki/Web_hosting_service
+    steps: |
+      1.  Create a folder named `web`.
+      1.  Download the [HTML Template](https://aulavirtual3.educa.madrid.org/ies.atenea.sansebastian/mod/resource/view.php?id=83319) into the `web` folder and save it as `index.html`. **Don't put any personal data**, as this page will be published on the Internet.
+      1.  Sign up with your email at [app.netlify.com/signup/email](https://app.netlify.com/signup/email).
+      1.  Go to your email inbox, wait for the verification email from Netlify, and open it. Then click on the "Verify email" button.
+           - If you verified your account using a different device (e.g. your smartphone), go to [app.netlify.com/login](app.netlify.com/login) and log into your account.
+      1.  Open [app.netlify.com/drop](https://app.netlify.com/drop), click the `browse to upload` button and select the `web` folder.
+      1.  Dismiss the notification window (if any), and click on `Open production deploy ↗`.
+      1.  Share the URL of the website in this activity submission.
+    challenge: |
+      Download an image from [Wikimedia](https://commons.wikimedia.org/) and add it to the website ([click here](https://commons.wikimedia.org/wiki/Special:Random/Image) for a random picture).
+    rubric:
+      Working URL: 8
+      Challenge: 2

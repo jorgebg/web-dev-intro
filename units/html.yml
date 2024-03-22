@@ -1,0 +1,25 @@
+pre_steps: |
+  1. Download the HTML Template and save it as `${idnumber}_name.html` (replacing "name" with your full name).
+  1. Replace the `title` tag with your name.
+post_steps: |
+  1. Upload the HTML file.
+instructions: |
+  Remember to upload a single HTML file named as `${idnumber}_name.html` (replacing "name" with your full name).
+title: "HyperText Markup Language (HTML)"
+name_prefix: "HTML ${nactivity}: "
+activities:
+  - name: Introduction
+    introduction: |
+      ![html element syntax](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png)
+      WIP
+    resources:
+      MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
+    steps: |
+      1. WIP
+    challenge: |
+      WIP
+    rubric:
+      Valid code: 1
+      Followed first two steps: 1
+      Content: 6
+      Challenge: 2
