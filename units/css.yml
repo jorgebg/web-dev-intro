@@ -6,6 +6,9 @@ post_steps: |
   1. Upload the HTML file.
 instructions: |
   Remember to upload a single HTML file named as `${idnumber}_name.html` (replacing "name" with your full name).
+base_rubric:
+  Valid code: 1
+  Followed first three steps: 3
 title: "Cascade Style Sheets (CSS)"
 name_prefix: "CSS ${nactivity}: "
 activities:
@@ -39,7 +42,7 @@ activities:
       ```
 
 
-      It's recommended to place the `styles` tag inside the `head` tag, so the styles are loaded before the body is rendered.
+      It's recommended to place the `style` tag inside the `head` tag, so the styles are loaded before the body is rendered.
 
     resources:
       MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#adding_css_to_our_document
@@ -48,10 +51,8 @@ activities:
     challenge: |
       Replace the named colors with [hexadecimal colors](https://www.w3schools.com/colors/colors_hexadecimal.asp).
     rubric:
-      Valid code: 1
-      Followed first three steps: 1
-      Background color: 3
-      Font color: 3
+      Background color: 2
+      Font color: 2
       Challenge: 2
 
   - name: Styling text
@@ -87,12 +88,10 @@ activities:
     challenge: |
       Without changing the class of the first item, change its style to be bold.
     rubric:
-      Valid code: 1
-      Followed first three steps: 1
-      1st item color: 1.5
-      2nd item color: 1.5
-      3rd item color: 1.5
-      Meaningful list: 1.5
+      1st item color: 1
+      2nd item color: 1
+      3rd item color: 1
+      Meaningful list: 1
       Challenge: 2
 
   - name: The box model
@@ -126,13 +125,11 @@ activities:
     steps: |
       1. Use CSS for changing the `padding` **and** `border` of the paragraph (`p` tag) of the template. The border color and size must be different from the given example.
       1. Add one image (`img` tag) from [Wikimedia](https://commons.wikimedia.org/). Use an absolute URL for the image source (`src="https://upload.wikimedia.org/..."`), don't download the image.
-      1. Use CSS for changing the `width` **or** `height` of the image.
+      1. Use CSS for changing the `width` **or** the `height` of the image.
     challenge: |
       Add a `margin` to both the paragraph and the image using a single CSS class.
     rubric:
-      Valid code: 1
-      Followed first three steps: 1
-      Paragraph padding: 2
-      Paragraph border: 2
+      Paragraph padding: 1
+      Paragraph border: 1
       Image width or height: 2
       Challenge: 2

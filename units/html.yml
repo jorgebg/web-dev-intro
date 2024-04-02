@@ -5,6 +5,9 @@ post_steps: |
   1. Upload the HTML file.
 instructions: |
   Remember to upload a single HTML file named as `${idnumber}_name.html` (replacing "name" with your full name).
+base_rubric:
+  Valid code: 1
+  Followed first three steps: 3
 title: "HyperText Markup Language (HTML)"
 name_prefix: "HTML ${nactivity}: "
 activities:

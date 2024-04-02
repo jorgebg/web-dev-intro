@@ -6,6 +6,9 @@ post_steps: |
   1. Upload the HTML file.
 instructions: |
   Remember to upload a single HTML file named as `${idnumber}_name.html` (replacing "name" with your full name).
+base_rubric:
+  Valid code: 1
+  Followed first three steps: 3
 title: "JavaScript (JS)"
 name_prefix: "JS ${nactivity}: "
 activities:
@@ -31,7 +34,7 @@ activities:
 
       JavaScript has many _functions_ that allows us to manipulate the elements of the HTML document (along with other things).
 
-      For example, the following code _calls_ the _function_ `documend.body.append`, which adds a given text at the end of the `body` element of the HTML document:
+      For example, the following code _calls_ the _function_ `document.body.append`, which adds a given text at the end of the `body` element of the HTML document:
 
       ```js
       document.body.append("Welcome")
@@ -76,9 +79,7 @@ activities:
       > 🏛️ Hello, student!
 
     rubric:
-      Valid code: 1
-      Followed first three steps: 1
-      Append the full name with JS: 6
+      Append the full name with JS: 4
       Challenge: 2
 
   - name: Variables
@@ -123,10 +124,8 @@ activities:
       The function `prompt(text)` shows a message with the text parameter, asks the user for input, and then returns its value.
       Using `prompt(text)`, a variable, and `document.body.append`, ask the user for their name and append it to the end of the body.
     rubric:
-      Valid code: 1
-      Followed first three steps: 1
-      Store the date in a variable: 3
-      Append the date: 3
+      Store the date in a variable: 2
+      Append the date: 2
       Challenge: 2
 
   - name: Objects
@@ -184,10 +183,8 @@ activities:
       The `Math` object has another function: `Math.floor(number)`, which returns a given number rounded down.
       Use the arithmetic operators and `Math.floor(number)` for changing the required random number with the result of rolling a 6-sided dice.
     rubric:
-      Valid code: 1
-      Followed first three steps: 1
-      Store a random number in a variable: 3
-      Replace paragraph text with a random number between 0 and 1: 3
+      Store a random number in a variable: 2
+      Replace paragraph text with a random number between 0 and 1: 2
       Challenge: 2
 
   - name: Functions and events
@@ -242,11 +239,9 @@ activities:
       <button>What time is it?</button>
       ```
     rubric:
-      Valid code: 1
-      Followed first three steps: 1
       Add a button: 1
-      Create `whatTime` function: 2
-      Call `whatTime` function on each click: 3
+      Create `whatTime` function: 1
+      Call `whatTime` function on each click: 2
       Challenge: 2
 
   # - name: Control
@@ -259,6 +254,4 @@ activities:
   #   challenge: |
   #     None
   #   rubric:
-  #     Valid code: 1
-  #     Followed first three steps: 1
-  #     None: 8
+  #     None: 6

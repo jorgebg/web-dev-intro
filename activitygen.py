@@ -105,6 +105,7 @@ def compile(unit, **kwargs):
     with open(f"units/{unit}.yml") as f:
         document = yaml.load(f, Loader=yaml.FullLoader)
 
+    base_rubric = document.get("base_rubric", {})
     instructions = document.get("instructions", "")
     instructions_html = md_to_html_oneline(instructions)
 
@@ -119,13 +120,14 @@ def compile(unit, **kwargs):
     md_content = "## {title}\n\n".format(**doc_context)
     cmd_content = ""
     for i, activity in enumerate(document["activities"]):
-        assert sum(activity["rubric"].values()) == 10
+        rubric = {**base_rubric, **activity.get("rubric", {})}
         nactivity = i + 1
         grading = "\n".join(
-            f"- {key}: {value} points\n" for key, value in activity["rubric"].items()
+            f"- {key}: {value} points\n" for key, value in rubric.items()
         )
         resources = "\n".join(
-            f"- [{key}]({value})\n" for key, value in activity["resources"].items()
+            f"- [{key}]({value})\n"
+            for key, value in activity.get("resources", []).items()
         )
         intro = (
             ""
@@ -174,6 +176,8 @@ def compile(unit, **kwargs):
             **context
         )
         cmd_content += cmd_tpl.format(**sh_context)
+
+        assert sum(rubric.values()) == 10, context["idnumber"]
     return Output(md=md_content, cmd=cmd_content)
 
 
