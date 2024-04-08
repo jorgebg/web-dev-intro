@@ -3,7 +3,7 @@
 ## Examples
 
 ```
-$ python3 activitygen.py --courseid=2"
+$ python3 activitygen.py --courseid=2
 ```
 
 This will create `activities.md`, `activities.html`, and `activities.sh`. The last one is a shell script for creating the activities in a Moodle instance using [`moosh activity-add`](https://moosh-online.com/commands/#activity-add).
