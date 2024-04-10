@@ -14,7 +14,27 @@ activities:
   - name: Introduction
     introduction: |
       ![html element syntax](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png)
-      WIP
+
+      <fieldset style="max-width:150px">
+        <legend>html</legend>
+
+        <fieldset>
+          <legend>head</legend>
+          <fieldset>
+            <legend>title</legend>
+            Example
+          </fieldset>
+        </fieldset>
+
+        <fieldset>
+          <legend>body</legend>
+          <fieldset>
+            <legend>p</legend>
+            Example.
+          </fieldset>
+        </fieldset>
+      </fieldset>
+
     resources:
       MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started
     steps: |
@@ -22,7 +42,5 @@ activities:
     challenge: |
       WIP
     rubric:
-      Valid code: 1
-      Followed first two steps: 1
-      Content: 6
+      Content: 4
       Challenge: 2

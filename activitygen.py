@@ -1,7 +1,5 @@
 import argparse
 import shlex
-import sys
-from pprint import pprint
 from string import Template
 
 import markdown
